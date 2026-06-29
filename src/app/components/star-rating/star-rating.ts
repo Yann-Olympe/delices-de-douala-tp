@@ -9,13 +9,13 @@ import { Component,input, output, signal } from '@angular/core';
 export class StarRating {
 
   currentRating = input<number>(0);
-  rate = output<number>()
+  ratingChanged = output<number>()
 
   star : number[]=[1,2,3,4,5];
   hoveredStar = signal(0);
 
-  rating (value:number){
-      this.rate.emit(value);
+  onStarClick (value:number){
+      this.ratingChanged.emit(value);
   }
 
   //survol des etoiles
