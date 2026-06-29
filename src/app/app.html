@@ -1,2 +1,3 @@
-<app-header/>
-<app-restaurant-list/>
+<app-header [ratedCount]="ratedCount()"></app-header>
+<app-restaurant-list (restaurantRated)="onRestaurantRated($event)" 
+                     [restaurants]="restaurants()"></app-restaurant-list>

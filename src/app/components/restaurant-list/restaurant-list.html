@@ -1,2 +1,6 @@
-<p>restaurant-list works!</p>
-<app-restaurant-card></app-restaurant-card>
+<div class="restaurant-list">
+    @for ( restaurant of restaurants(); track restaurant.id) {
+    <app-restaurant-card (restaurantRated)="onRestaurantRated($event)" 
+                         [restaurant]="restaurant"></app-restaurant-card>
+    }
+</div>
