@@ -1,0 +1,10 @@
+span{
+    cursor: pointer;
+    font-size: 2rem;
+    color:gray;
+
+}
+span.gold{
+    transition: color 400ms;
+    color:gold;
+}

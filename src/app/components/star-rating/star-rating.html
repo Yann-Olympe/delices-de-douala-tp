@@ -1,1 +1,6 @@
-<p>star-rating works!</p>
+@for (item of star; track $index) {
+    <span [class.gold]="hoveredStar() > 0 ? item <= hoveredStar(): item<= currentRating()"
+          (mouseenter)="onHover(item)"
+          (mouseleave)="onLeaveHover()"
+        (click)="rating(item)">&#9733;</span>
+}
