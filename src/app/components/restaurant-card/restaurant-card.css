@@ -1,0 +1,32 @@
+.restau-card{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 350ms ease, box-shadow 300ms 150ms ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
+
+    }
+}
+.restau-card h3{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    font-style: italic;
+}
+
+.rating-text{
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: gold;
+}
+
+.no-rating {
+    margin-top:  margin-top;
+    font-size: 0.85rem;
+    color: #555;
+}

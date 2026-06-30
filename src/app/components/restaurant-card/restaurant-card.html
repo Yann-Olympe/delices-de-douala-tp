@@ -5,8 +5,8 @@
     
     <app-star-rating (ratingChanged)="ratingChanged($event)" [currentRating]="restaurant().currentRating"></app-star-rating>
     @if (restaurant().currentRating > 0) {
-        <p>{{restaurant().currentRating}}/5</p>
+        <p class="rating-text">{{restaurant().currentRating}}/5</p>
     }@else {
-        <p>Cliquez !</p>
+        <p class="no-rating">Cliquez !</p>
     }
 </div>

@@ -1,0 +1,19 @@
+.header{
+    background:linear-gradient(135deg,#1f1f1f,#2d2d2d);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid gold;
+    box-shadow: 0 2px 20px rgba(255, 215, 0, 0.2);
+    text-align: center;
+}
+
+.header h1{
+    font-size: 2rem;
+    color: gold;
+    letter-spacing: 1.5px;
+}
+.header p{
+    margin-top: 0.5rem;
+    color:#aaa;
+    font-size: 1rem;
+}

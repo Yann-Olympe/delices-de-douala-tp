@@ -1,10 +1,13 @@
 span{
     cursor: pointer;
     font-size: 2rem;
-    color:gray;
-
+    color:#333;
+    transition: transform 0.15s ease,color 400ms ease;
+ 
 }
 span.gold{
-    transition: color 400ms;
     color:gold;
+}
+span:hover{
+     transform: scale(2);
 }
