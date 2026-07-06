@@ -3,7 +3,7 @@ export interface Plat {
     id: string;
     nom: string;
     prix: number;
-    categories : string;
+    categorie : string;
     disponible : boolean;
     
 
