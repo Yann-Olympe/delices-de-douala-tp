@@ -1,46 +1,46 @@
-// Affichage du bouton categorie
-@for (cat of categories; track cat) {
-  <button (click)="categorieSelectionee.set(cat)">{{ cat }}</button>
+<div class= "carte-container">
+<!--Affichage du bouton categorie-->
+<div class="filtre">
+
+  @for (cat of categories; track cat) {
+    <button (click)="categorieSelectionee.set(cat)" [class.active]="categorieSelectionee() === cat">{{ cat }}</button>
 }
-//Plat du jour
+</div>
+<!--Plat du jour-->
 @if (platDujour()) {
   <div class="plat-du-jour">
     <h2>Plat du jour</h2>
-    <div class="card">
-      <img src="" class="card-img-top" alt={{platDujour()?.nom}} />
-      <div class="card-body">
-        <h5 class="card-title">{{platDujour()?.nom}}</h5>
-        <p class="card-text">{{platDujour()?.categorie}}</p>
-        <p class="card-text">Prix: {{platDujour()?.prix | currency:'XAF': 'symbol': '1.0-0'}}</p>
-        <p class="card-text"> {{platDujour()?.disponible ? 'Disponible' : 'Non disponible'}}</p>
+    <div class="plat-card">
+        <h5>{{platDujour()?.nom}}</h5>
+        <p>{{platDujour()?.categorie}}</p>
+        <p>Prix: {{platDujour()?.prix | currency:'XAF': 'symbol': '1.0-0'}}</p>
+        <p> {{platDujour()?.disponible ? 'Disponible' : 'Non disponible'}}</p>
       </div>
     </div>
-  </div>
 }
 
-//gestion de l'affichage des plats
+<!--gestion de l'affichage des plats-->
 @if (plats.isLoading()) {
   <p>Chargement des plats...</p>
 } @else if (plats.error()) {
   <p>Erreur lors du chargement des plats: {{plats.error()}}</p>
 } @else {   
-@if (plats.value.length > 0) {
-  <div class="row">
-    @for ( plat of platsFiltres(); track plat.id) { // Utilisation de platsFiltres() pour afficher les plats filtrés
+@if (platsFiltres().length > 0) {
+  <div class="plat-grid">
+    @for ( plat of platsFiltres(); track plat.id) { 
+      <!--Utilisation de platsFiltres() pour afficher les plats filtrés--> 
       <div class="col-md-4 mb-4">
-        <div class="card h-100">
-          <img src="" class="card-img-top" alt={{plat.nom}} />
-          <div class="card-body">
-            <h5 class="card-title">{{plat.nom}}</h5>
-            <p class="card-text">{{plat.categorie}}</p>
-            <p class="card-text">Prix: {{plat.prix | currency:'XAF': 'symbol': '1.0-0'}}</p>
+        <div class="plat-card">
+            <h5>{{plat.nom}}</h5>
+            <p>{{plat.categorie}}</p>
+            <p>Prix: {{plat.prix | currency:'XAF': 'symbol': '1.0-0'}}</p>
             <p class="card-text"> {{plat.disponible ? 'Disponible' : 'Non disponible'}}</p>
           </div>
         </div>
-      </div>
-    }
+          }
   </div>
 } @else {
   <p>Aucun plat disponible pour le moment.</p>
 }
 }
+</div>

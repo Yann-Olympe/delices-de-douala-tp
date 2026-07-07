@@ -1,7 +1,8 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { RestaurantCard } from '../restaurant-card/restaurant-card';
 import { Restaurant } from '../../models/restaurant';
 import { RatingEvent } from '../../models/ratingEvent';
+import { RestaurantService } from '../../services/restaurant.service';
 
 @Component({
   selector: 'app-restaurant-list',
@@ -10,11 +11,7 @@ import { RatingEvent } from '../../models/ratingEvent';
   styleUrl: './restaurant-list.css',
 })
 export class RestaurantList {
-  restaurants = input<Restaurant[]>();// recois la liste des info depuis app
-  restaurantRated = output<RatingEvent>();
+  restaurants = inject(RestaurantService).restaurantsList;
 
-  onRestaurantRated(value:RatingEvent){
-    this.restaurantRated.emit(value); // propagation de la note attribuer depuis le starRating
-  }
 
 }

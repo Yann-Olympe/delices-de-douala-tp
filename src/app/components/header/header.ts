@@ -8,5 +8,7 @@ import { Component, input } from '@angular/core';
 })
 export class Header {
   ratedCount = input<number>(0);
+  averageRating = input<number | null>(0);
+
 }
 

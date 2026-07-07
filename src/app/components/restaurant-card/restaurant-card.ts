@@ -1,7 +1,7 @@
-import { Component, input, output} from '@angular/core';
+import { Component, inject, input, output} from '@angular/core';
 import { StarRating } from '../star-rating/star-rating';
 import { Restaurant } from '../../models/restaurant';
-import { RatingEvent } from '../../models/ratingEvent';
+import { RestaurantService } from '../../services/restaurant.service';
 
 @Component({
   selector: 'app-restaurant-card',
@@ -11,14 +11,13 @@ import { RatingEvent } from '../../models/ratingEvent';
 })
 export class RestaurantCard {
   restaurant = input.required<Restaurant>();//donnee du restaurant
-  restaurantRated = output<RatingEvent>(); // note du restaurant
+  private readonly restaurantRated = inject(RestaurantService);
   
   ratingChanged(value:number){
-    // recuperration de la note du restaurant
-      const ratingEventObject : RatingEvent = {restaurantId:this.restaurant().id, newRating:value}
+    const ratingEvent = {restaurantId:this.restaurant().id, newRating:value};
+    this.restaurantRated.onRestaurantRated(ratingEvent); // on emet l'evenement vers le service restaurant pour mettre a jour la note du restaurant
  
-    this.restaurantRated.emit(ratingEventObject);
-    // on le repropage a restaurantList
+
   }
   
 }

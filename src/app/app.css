@@ -1,0 +1,42 @@
+nav {
+    display:flex;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    position: sticky;
+    top:0;
+    z-index: 100;
+    justify-content: center;
+
+}
+nav a{
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: gold;
+    border-bottom: 2px solid gold;
+}
+.nav-glow{
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, gold 30%,#ffaa00 50%, gold 70%, transparent 100%);
+    background-size: 200% 100%;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    animation: flowgold 3s ease-in infinite;
+}
+
+@keyframes flowgold{
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}

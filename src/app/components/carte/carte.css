@@ -1,0 +1,72 @@
+.carte-container{
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+}
+.plat-du-jour{
+   background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+   border: 1px solid gold; 
+   padding: 1.5rem;
+   margin-bottom: 2rem;
+   border-radius: 12px;
+   text-align: center;
+
+}
+
+.plat-du-jour h2{
+    color:gold;
+    margin-bottom: 2rem;
+}
+
+.filtre {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    
+}
+.filtre button {
+    padding: 0.5rem 1rem;
+    color: #ccc;
+    border: 1px solid #444;
+    border-radius: 20px;
+    background: #2a2a2a;
+    cursor: pointer;
+    transition: transform 0.3s 0.10s ease-in-out, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.filtre button:hover, .filtre button.active{
+    background: gold;
+    color: #111;
+    border-color: gold;
+    transform: scale(1.10);
+}
+.plat-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.plat-card{
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.plat-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255,215,0,0.1);
+    border-color: gold;
+}
+.plat-card p{
+    color:#888;
+    font-size: 0.9rem;
+}
+.plat-card h5{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+

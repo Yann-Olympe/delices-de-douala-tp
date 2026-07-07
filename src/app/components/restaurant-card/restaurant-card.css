@@ -1,6 +1,7 @@
 .restau-card{
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 350ms ease, box-shadow 300ms 150ms ease;
@@ -9,6 +10,7 @@
     &:hover{
         transform: translateY(-4px);
         box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
+        border: 2px solid gold;
 
     }
 }
