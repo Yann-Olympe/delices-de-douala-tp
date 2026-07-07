@@ -1,10 +1,12 @@
 <div class= "carte-container">
-<!--Affichage du bouton categorie-->
+<!--Affichage du bouton categorie et barre de recherche-->
+
 <div class="filtre">
 
   @for (cat of categories; track cat) {
     <button (click)="categorieSelectionee.set(cat)" [class.active]="categorieSelectionee() === cat">{{ cat }}</button>
 }
+<input type ="text" placeholder="Rechercher un plat..." [value]="recherche()" (input)="recherche.set($event.target.value)" />
 </div>
 <!--Plat du jour-->
 @if (platDujour()) {
@@ -30,7 +32,7 @@
     @for ( plat of platsFiltres(); track plat.id) { 
       <!--Utilisation de platsFiltres() pour afficher les plats filtrés--> 
       <div class="col-md-4 mb-4">
-        <div class="plat-card">
+        <div class="plat-card" [class.unavailable]="!plat.disponible">
             <h5>{{plat.nom}}</h5>
             <p>{{plat.categorie}}</p>
             <p>Prix: {{plat.prix | currency:'XAF': 'symbol': '1.0-0'}}</p>

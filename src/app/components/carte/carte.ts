@@ -20,7 +20,12 @@ export class Carte {
   // Liste des catégories de plats
   categories = ['Toutes', 'Plats', 'Grillades', 'Végétarien', 'Boissons'];
   categorieSelectionee = signal<string >('Toutes'); // Signal pour stocker la catégorie sélectionnée, initialisée à "Toutes"
-  platsFiltres = computed(() => this.categorieSelectionee()==='Toutes' ? this.plats.value()??[] : (this.plats.value()??[]).filter(plat => plat.categorie === this.categorieSelectionee())??[]); // Signal calculé pour filtrer les plats en fonction de la catégorie sélectionnée
+  recherche = signal<string>(''); // Signal pour stocker la valeur de recherche, initialisée à une chaîne vide
+  
+  platsFiltres = computed(() => {
+    let plats = this.categorieSelectionee() === 'Toutes' ? this.plats.value() ?? [] : (this.plats.value() ?? []).filter(plat => plat.categorie === this.categorieSelectionee()) ?? [];
+    return plats.filter(plat => plat.nom.toLowerCase().includes(this.recherche().toLowerCase()));
+  }); // Signal calculé pour filtrer les plats en fonction de la catégorie sélectionnée et de la recherche
 
   compteur = toSignal(interval(5000), {initialValue: 0}); // Signal pour compter le nombre de secondes écoulées, mis à jour toutes les 5 secondes
   platDujour = computed(() => {

@@ -27,6 +27,7 @@
 }
 .filtre button {
     padding: 0.5rem 1rem;
+    flex: 0 0 auto;
     color: #ccc;
     border: 1px solid #444;
     border-radius: 20px;
@@ -45,6 +46,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+}
+.plat-card.unavailable{
+    opacity:0.5;
+    filter: grayscale(100%);
 }
 .plat-card{
     background: #1e1e1e;
@@ -70,3 +75,20 @@
     margin-bottom: 0.5rem;
 }
 
+input[type = "text"]{
+    width:30%;
+    padding: 0.5rem 1rem;
+    border-radius : 20px;
+    border: 1px solid #444;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition:border-color 0.2s ease;
+    margin-left:auto;
+}
+
+input[type= "text"]:focus{
+    border-color:gold;
+}
