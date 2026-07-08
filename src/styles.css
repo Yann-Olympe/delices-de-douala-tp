@@ -11,3 +11,6 @@ body{
     font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
 }
+*,*::before, *::after {
+    box-sizing: border-box;
+}

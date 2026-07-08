@@ -92,3 +92,47 @@ input[type = "text"]{
 input[type= "text"]:focus{
     border-color:gold;
 }
+
+@media (max-width: 768px) {
+    .plat-grid{
+        grid-template-columns: 1fr;
+    }
+    input[type = "text"]{
+        width: 90px;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+      .filtre{
+    gap: 1rem;
+    
+  }
+  .plat-du-jour {
+    padding: 1rem;
+  }
+  .filtre button{
+    font-size: 0.8rem;
+    padding : 0.3rem 0.6rem;
+      }
+  .plat-grid{
+    grid-template-columns: 1fr;
+    
+  }
+  .carte-container{
+    padding: 1rem;
+    padding-bottom: 5rem; /* pour laisser de l'espace pour le menu fixe */
+  }
+}
+
+@media (max-width: 480px){
+    .filtre {
+        gap: 0.5rem; 
+    }
+    .filtre button{
+        padding: 0.3rem  0.3rem;
+        margin-bottom: 2rem ;
+
+    }
+    input[type="text"]{
+        width: 100%;
+    }
+}

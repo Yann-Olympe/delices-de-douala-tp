@@ -6,3 +6,9 @@
     max-width: 900px;
     margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .restaurant-list {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+    padding: 1rem;
+  }
+}

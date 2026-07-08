@@ -6,7 +6,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 350ms ease, box-shadow 300ms 150ms ease;
     cursor: pointer;
-
+    text-align: center;
     &:hover{
         transform: translateY(-4px);
         box-shadow: 0 8px 24px rgba(255, 215, 0, 0.15);
@@ -16,7 +16,7 @@
 }
 .restau-card h3{
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 0.3rem;
 
 }
@@ -28,7 +28,25 @@
 }
 
 .no-rating {
-    margin-top:  margin-top;
+    margin-top: 0.5rem;
     font-size: 0.85rem;
     color: #555;
+}
+
+.texte{
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .restau-card {
+    padding: 0.8rem;
+  }
+  .restau-card h3 {
+    font-size: 1rem;
+  }
+  .texte {
+    font-size: 0.8rem;
+  }
 }

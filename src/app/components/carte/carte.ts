@@ -22,6 +22,8 @@ export class Carte {
   categorieSelectionee = signal<string >('Toutes'); // Signal pour stocker la catégorie sélectionnée, initialisée à "Toutes"
   recherche = signal<string>(''); // Signal pour stocker la valeur de recherche, initialisée à une chaîne vide
   
+
+
   platsFiltres = computed(() => {
     let plats = this.categorieSelectionee() === 'Toutes' ? this.plats.value() ?? [] : (this.plats.value() ?? []).filter(plat => plat.categorie === this.categorieSelectionee()) ?? [];
     return plats.filter(plat => plat.nom.toLowerCase().includes(this.recherche().toLowerCase()));

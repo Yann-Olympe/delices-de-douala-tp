@@ -9,7 +9,8 @@
 
 .header h1{
     font-size: 3rem;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
     color: gold;
     letter-spacing: 1.5px;
 }
@@ -17,4 +18,23 @@
     margin-top: 0.5rem;
     color:#aaa;
     font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+    .header p {
+        font-size: 0.9rem;
+    }
+
+}
+@media(max-width:480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+        .header p {
+            font-size: 0.8rem;
+        }
+        
+    
 }
