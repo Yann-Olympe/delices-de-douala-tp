@@ -17,7 +17,9 @@
 ## 📸 Aperçu
 
 | Page Restaurants | Page Menu |
-|<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/33e56fbd-ac14-46c8-95c4-555f9e89e86a" />|-----------|
+|-----------|-----------|
+|<img width="2048" height="1752" alt="delices-de-douala-tp-ten vercel app_ (4)" src="https://github.com/user-attachments/assets/372cff4e-82bd-49d7-9129-9e1ab006667b" />|
+
 |  |<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/243c4a1e-69a9-44c0-9a8a-7a011596b8e1" />
  |
 
