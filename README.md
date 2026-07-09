@@ -18,13 +18,14 @@
 
 | Page Restaurants | Page Menu |
 |-----------------|-----------|
-| _screenshot ici_ | _screenshot ici_ |
+|  |<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/243c4a1e-69a9-44c0-9a8a-7a011596b8e1" />
+ |
 
 ---
 
 ## 📖 Description
 
-**Délices de Douala** est une application web Angular 19 permettant de :
+**Délices de Douala** est une application web Angular 22 permettant de :
 - Noter les meilleurs restaurants de Douala (système 5 étoiles)
 - Consulter le menu avec filtres par catégorie et recherche en temps réel
 - Découvrir un plat du jour qui change automatiquement toutes les 5 secondes
@@ -32,6 +33,7 @@
 Projet réalisé dans le cadre de l'**Angular Talent Lab 2026** — Sessions J7 et J8.
 
 ---
+<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/33e56fbd-ac14-46c8-95c4-555f9e89e86a" />
 
 ## ✨ Fonctionnalités
 
@@ -49,13 +51,13 @@ Projet réalisé dans le cadre de l'**Angular Talent Lab 2026** — Sessions J7 
 - Recherche par nom en temps réel
 - Plat du jour rotatif toutes les 5 secondes
 - Affichage des prix en FCFA
-- Badge "Épuisé" pour les plats indisponibles
+
 
 ### 📱 Design & UX
 - Dark mode complet
 - Design responsive (Mobile, Tablette, Desktop)
 - Bottom navigation sur mobile
-- Animation flux doré sous la navbar
+- Animation flux doré sous la navbar vue desktop
 - Transitions et effets hover sur les cartes
 
 ---
