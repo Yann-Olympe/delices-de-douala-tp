@@ -1,59 +1,172 @@
-# DelicesDeDoualaTp
+# 🍽️ Délices de Douala
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.2.
+> Système de notation de restaurants et menu interactif — Douala, Cameroun
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-19-red?logo=angular)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
+![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## 🌐 Demo
+
+🔗 **[Voir l'application en live](https://delices-de-douala-tp-ten.vercel.app/)**
+
+---
+
+## 📸 Aperçu
+
+| Page Restaurants | Page Menu |
+|-----------------|-----------|
+| _screenshot ici_ | _screenshot ici_ |
+
+---
+
+## 📖 Description
+
+**Délices de Douala** est une application web Angular 19 permettant de :
+- Noter les meilleurs restaurants de Douala (système 5 étoiles)
+- Consulter le menu avec filtres par catégorie et recherche en temps réel
+- Découvrir un plat du jour qui change automatiquement toutes les 5 secondes
+
+Projet réalisé dans le cadre de l'**Angular Talent Lab 2026** — Sessions J7 et J8.
+
+---
+
+## ✨ Fonctionnalités
+
+### 🏠 Page Restaurants
+- Affichage de 6 restaurants camerounais en grille
+- Notation interactive de 1 à 5 étoiles avec effet hover
+- Compteur en temps réel des restaurants notés
+- Calcul automatique de la moyenne des notes
+- Persistence de la note après re-notation
+
+### 🍽️ Page Menu
+- Chargement du menu depuis une API JSON via `httpResource()`
+- Gestion des 3 états : chargement / erreur / données
+- Filtre par catégorie (Toutes, Plats, Grillades, Végétarien, Boissons)
+- Recherche par nom en temps réel
+- Plat du jour rotatif toutes les 5 secondes
+- Affichage des prix en FCFA
+- Badge "Épuisé" pour les plats indisponibles
+
+### 📱 Design & UX
+- Dark mode complet
+- Design responsive (Mobile, Tablette, Desktop)
+- Bottom navigation sur mobile
+- Animation flux doré sous la navbar
+- Transitions et effets hover sur les cartes
+
+---
+
+## 🏗️ Architecture
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── header/          # Titre + compteur restaurants notés
+│   │   ├── restaurant-list/ # Grille des 6 restaurants
+│   │   ├── restaurant-card/ # Carte individuelle d'un restaurant
+│   │   ├── star-rating/     # Composant étoiles interactif
+│   │   └── carte/           # Page menu avec filtres
+│   ├── services/
+│   │   ├── restaurant.service.ts  # État global des restaurants
+│   │   └── menu.service.ts        # Chargement menu via httpResource
+│   └── models/
+│       ├── restaurant.ts    # Interface Restaurant
+│       ├── plat.ts          # Interface Plat
+│       └── rating-event.ts  # Interface RatingEvent
+├── environments/
+│   ├── environment.ts
+│   └── environment.development.ts
+└── public/
+    └── api/
+        └── plats.json       # Données du menu
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🛠️ Stack Technique
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+| Technologie | Usage |
+|-------------|-------|
+| Angular 19 | Framework principal |
+| TypeScript | Typage statique |
+| Signals | Gestion d'état réactive |
+| httpResource() | Requêtes HTTP modernes |
+| toSignal() | Conversion Observable → Signal |
+| RxJS interval() | Plat du jour rotatif |
+| Angular Router | Navigation entre pages |
+| CSS Grid / Flexbox | Mise en page responsive |
+
+---
+
+## 🔑 Concepts Angular Appliqués
+
+- ✅ **Standalone Components** — aucun NgModule
+- ✅ **input() / output()** — communication parent/enfant moderne
+- ✅ **signal() / computed()** — état réactif
+- ✅ **httpResource()** — chargement HTTP avec 3 états
+- ✅ **inject()** — injection de dépendances moderne
+- ✅ **toSignal()** — interop RxJS/Signals
+- ✅ **@if / @for** — control flow moderne
+- ✅ **Services partagés** — état centralisé
+- ✅ **RouterLink / RouterLinkActive** — navigation déclarative
+
+---
+
+## 🚀 Installation & Lancement
 
 ```bash
-ng generate component component-name
+# Cloner le repo
+git clone https://github.com/Yann-Olympe/delices-de-douala-tp.git
+cd delices-de-douala-tp
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
+npm start 
+
+# Ouvrir dans le navigateur
+http://localhost:8080
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## 📦 Build Production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 🗂️ Données
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Les restaurants et plats sont des établissements et spécialités **réels de Douala** :
 
-```bash
-ng test
-```
+**Restaurants :**
+- Le Calao Doré — Akwa (Ndolé aux crevettes)
+- Chez Madame Ngono — Bonapriso (Eru aux pieds de bœuf)
+- La Fourchette Camerounaise — Bonanjo (Poulet DG)
+- Saveurs du Wouri — Bonamoussadi (Poisson braisé)
+- L'Akwa Gourmand — Akwa (Bobolo et sauce arachide)
+- Le Royal de Bali — Bali (Koki et plantain)
 
-## Running end-to-end tests
+**Plats du menu :** Ndolé, Poulet DG, Poisson braisé, Eru, Koki, Bissap, Gingembre
 
-For end-to-end (e2e) testing, run:
+---
 
-```bash
-ng e2e
-```
+## 👤 Auteur
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+**MBOH YANN JUNIOR** — Étudiant en Génie Logiciel  
+🐙 [GitHub](https://github.com/Yann-Olympe)
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📄 Licence
+
+Projet réalisé dans le cadre de la formation ODC  **Angular Talent Lab 2026**.
