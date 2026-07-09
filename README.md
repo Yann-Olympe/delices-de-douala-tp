@@ -17,7 +17,7 @@
 ## 📸 Aperçu
 
 | Page Restaurants | Page Menu |
-|-----------------|-----------|
+|<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/33e56fbd-ac14-46c8-95c4-555f9e89e86a" />|-----------|
 |  |<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/243c4a1e-69a9-44c0-9a8a-7a011596b8e1" />
  |
 
@@ -33,7 +33,11 @@
 Projet réalisé dans le cadre de l'**Angular Talent Lab 2026** — Sessions J7 et J8.
 
 ---
-<img width="2048" height="2456" alt="delices-de-douala-tp-ten vercel app_ (5)" src="https://github.com/user-attachments/assets/33e56fbd-ac14-46c8-95c4-555f9e89e86a" />
+<img width="1536" height="3240" alt="delices-de-douala-tp-ten vercel app_ (2)" src="https://github.com/user-attachments/assets/6459e09d-71a7-40ad-accb-171df059c512" />
+
+<img width="640" height="2456" alt="delices-de-douala-tp-ten vercel app_" src="https://github.com/user-attachments/assets/4219c8fa-ec6c-4883-b88c-95600d99c675" />
+
+
 
 ## ✨ Fonctionnalités
 
