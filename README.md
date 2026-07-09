@@ -33,8 +33,7 @@
 Projet réalisé dans le cadre de l'**Angular Talent Lab 2026** — Sessions J7 et J8.
 
 ---
-|-----------|-----------|
-|<img width="1536" height="3240" alt="delices-de-douala-tp-ten vercel app_ (2)" src="https://github.com/user-attachments/assets/6459e09d-71a7-40ad-accb-171df059c512" />|<img width="640" height="2456" alt="delices-de-douala-tp-ten vercel app_" src="https://github.com/user-attachments/assets/4219c8fa-ec6c-4883-b88c-95600d99c675" />|<img width="640" height="2456" alt="delices-de-douala-tp-ten vercel app_" src="https://github.com/user-attachments/assets/1a11cefb-e50b-4583-b616-b1ea0982541d" />|
+
 
 
 
