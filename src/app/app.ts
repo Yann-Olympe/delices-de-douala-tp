@@ -4,10 +4,11 @@ import { Restaurant } from './models/restaurant';
 import { Header } from './components/header/header';
 import { RestaurantCard } from './components/restaurant-card/restaurant-card';
 import { RestaurantService } from './services/restaurant.service';
+import { Inscription } from "./components/inscription/inscription";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink,Header,RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, Header, RouterLinkActive, Inscription],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
